@@ -6,7 +6,7 @@
 #    By: edinguim <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 15:04:32 by edinguim          #+#    #+#              #
-#    Updated: 2017/11/10 16:33:30 by edinguim         ###   ########.fr        #
+#    Updated: 2017/11/10 18:51:09 by edinguim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,7 @@ OBJ = *.o
 
 INC = *.h
 
-all: $(NAME)
-
-$(NAME):
+all:
 	gcc -c $(SRC) -I $(INC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
@@ -28,7 +26,7 @@ $(NAME):
 clean:
 	rm -rf $(OBJ)
 
-fclean: clen
+fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all

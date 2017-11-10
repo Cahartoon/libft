@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 17:05:38 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/10 17:05:42 by edinguim         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:08:04 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char	*ft_strim(const char *s)
+char	*ft_strtrim(const char *s)
 {
 	unsigned int	start;
 	unsigned int	end;

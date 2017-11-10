@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:40:57 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/10 13:53:00 by edinguim         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:54:45 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmap(const char *s, char (*f)(char))
 	char			*res;
 	unsigned int	i;
 
-	if (!(res = (char *)malloc(sizeof(*res) * (ft_strlen(s) + 1))))
+	if (!(res = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	while (s[i])
 	{
