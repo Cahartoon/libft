@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 00:00:20 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/10 00:00:26 by edinguim         ###   ########.fr       */
+/*   Updated: 2017/11/11 23:12:25 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,11 @@ int		ft_atoi(const char *s)
 	sign = 1;
 	while (ft_isspace(*s))
 		s++;
-	if (ft_isalpha(*s))
+	if (*s == '-' || *s == '+')
 	{
 		if (*s == '-')
-		{
 			sign = -1;
-			s++;
-		}
-		else if (*s != '+')
-			return (n);
+		s++;
 	}
 	while (ft_isdigit(*s))
 	{

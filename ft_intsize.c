@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_intsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 16:30:17 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/11 21:32:27 by edinguim         ###   ########.fr       */
+/*   Created: 2017/11/12 03:46:01 by edinguim          #+#    #+#             */
+/*   Updated: 2017/11/12 03:51:30 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+size_t	ft_intsize(int n)
 {
-	while (n--)
+	size_t	size;
+
+	size = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		size++;
+	while (n)
 	{
-		*(unsigned char *)dest++ = *(unsigned char *)src++;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return ((unsigned char *)dest);
+		n /= 10;
+		size++;
 	}
-	return (NULL);
+	return (size);
 }

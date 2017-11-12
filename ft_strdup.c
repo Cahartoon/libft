@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:53:54 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/09 14:27:18 by edinguim         ###   ########.fr       */
+/*   Updated: 2017/11/12 00:24:19 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,10 @@
 char	*ft_strdup(const char *s)
 {
 	char	*dup;
-	size_t	l;
+	size_t	i;
 
-	l = ft_strlen(s);
-	if (!(dup = ft_strnew(l)))
+	if (!(dup = ft_strnew(ft_strlen(s))))
 		return (NULL);
-	while (*s)
-		*dup++ = *s++;
-	*dup = '\0';
-	return (dup - l);
+	dup = ft_strcpy(dup, s);
+	return (dup);
 }

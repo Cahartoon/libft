@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 16:30:17 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/11 21:32:27 by edinguim         ###   ########.fr       */
+/*   Created: 2017/11/12 05:02:12 by edinguim          #+#    #+#             */
+/*   Updated: 2017/11/12 05:02:16 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+size_t	ft_strclen(const char *s, char c)
 {
-	while (n--)
+	size_t	i;
+
+	if (s && c)
 	{
-		*(unsigned char *)dest++ = *(unsigned char *)src++;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return ((unsigned char *)dest);
+		i = 0;
+		while (*s != c && *s)
+		{
+			s++;
+			i++;
+		}
+		return (i);
 	}
-	return (NULL);
+	return (0);
 }

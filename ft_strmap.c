@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 13:40:57 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/10 18:54:45 by edinguim         ###   ########.fr       */
+/*   Created: 2017/11/12 00:27:20 by edinguim          #+#    #+#             */
+/*   Updated: 2017/11/12 00:34:02 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,18 @@ char	*ft_strmap(const char *s, char (*f)(char))
 	char			*res;
 	unsigned int	i;
 
-	if (!(res = ft_strnew(ft_strlen(s))))
-		return (NULL);
-	while (s[i])
+	if (s && f)
 	{
-		res[i] = f(s[i]);
-		i++;
+		if (!(res = ft_strnew(ft_strlen(s))))
+			return (NULL);
+		i = 0;
+		while (s[i])
+		{
+			res[i] = f(s[i]);
+			i++;
+		}
+		res[i] = '\0';
+		return (res);
 	}
-	res[i] = '\0';
-	return (res);
+	return (NULL);
 }

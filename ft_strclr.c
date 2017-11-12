@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 23:15:46 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/09 23:18:22 by edinguim         ###   ########.fr       */
+/*   Created: 2017/11/12 00:26:38 by edinguim          #+#    #+#             */
+/*   Updated: 2017/11/12 00:30:20 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ void	ft_strclr(char *s)
 	int		i;
 	int		len;
 
-	i = 0;
-	len = ft_strlen(s);
-	while (i < len)
+	if (s)
 	{
-		s[i] = '\0';
-		i++;
+		i = 0;
+		len = ft_strlen(s);
+		while (i < len)
+		{
+			s[i] = '\0';
+			i++;
+		}
 	}
 }

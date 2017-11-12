@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strword.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 16:30:17 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/11 21:32:27 by edinguim         ###   ########.fr       */
+/*   Created: 2017/11/11 19:09:58 by edinguim          #+#    #+#             */
+/*   Updated: 2017/11/11 19:21:52 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+size_t	ft_strword(const char *s, char c)
 {
-	while (n--)
+	size_t	count;
+
+	count = 0;
+	if (s && ft_strlen(s))
 	{
-		*(unsigned char *)dest++ = *(unsigned char *)src++;
-		if (*(unsigned char *)src == (unsigned char)c)
-			return ((unsigned char *)dest);
+		if (*s != c)
+			count++;
+		while (*s)
+		{
+			if (*s != c && *(s - 1) == c)
+				count++;
+			s++;
+		}
 	}
-	return (NULL);
+	return (count);
 }

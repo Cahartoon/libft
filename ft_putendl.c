@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:40:21 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/08 21:45:12 by edinguim         ###   ########.fr       */
+/*   Updated: 2017/11/12 02:24:50 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl(const char *str)
 {
+	if (!str)
+		return ;
 	while (*str)
 		ft_putchar(*str++);
 	ft_putchar('\n');

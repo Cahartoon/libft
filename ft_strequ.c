@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:54:01 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/10 13:59:09 by edinguim         ###   ########.fr       */
+/*   Updated: 2017/11/11 23:52:45 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 int		ft_strequ(const char *s1, const char *s2)
 {
-	if (!ft_strcmp(s1, s2))
-		return (1);
-	else
-		return (0);
+	if (s1 && s2)
+	{
+		if (!ft_strcmp(s1, s2))
+			return (1);
+		else
+			return (0);
+	}
+	return (0);
 }

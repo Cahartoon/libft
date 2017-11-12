@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 21:20:50 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/09 21:23:38 by edinguim         ###   ########.fr       */
+/*   Updated: 2017/11/11 22:29:00 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const char	*p;
 
-	p = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			p = s;
 		s++;
 	}
-	return ((char*)p);
+	if (!*s && c == 0)
+		return ((char *)s);
+	else if (*p == (char)c)
+		return ((char *)p);
+	return (NULL);
 }

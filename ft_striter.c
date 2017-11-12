@@ -5,16 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 23:48:22 by edinguim          #+#    #+#             */
-/*   Updated: 2017/11/09 23:49:44 by edinguim         ###   ########.fr       */
+/*   Created: 2017/11/12 00:26:49 by edinguim          #+#    #+#             */
+/*   Updated: 2017/11/12 00:33:29 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	while (*s)
+	int		i;
+
+	if (s && f)
 	{
-		f(s);
-		s++;
+		i = 0;
+		while (s[i])
+		{
+			f(&s[i]);
+			i++;
+		}
 	}
 }
