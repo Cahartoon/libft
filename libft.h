@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 18:36:42 by edinguim          #+#    #+#             */
-/*   Updated: 2018/02/16 11:32:03 by edinguim         ###   ########.fr       */
+/*   Updated: 2018/02/16 13:31:54 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ char				**ft_strsplit(const char *s, char c);
 size_t				ft_strword(const char *s, char c);
 char				*ft_tabcat(const char **tab);
 char				*ft_tabccat(const char **tab, const char *s);
+size_t				ft_tablen(const char **tab);
 t_list				*ft_lstnew(const void *content, size_t content_size);
 void				ft_lstdelone(t_list **alist, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));

@@ -6,7 +6,7 @@
 #    By: edinguim <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 15:04:32 by edinguim          #+#    #+#              #
-#    Updated: 2018/02/16 11:32:44 by edinguim         ###   ########.fr        #
+#    Updated: 2018/02/16 13:31:07 by edinguim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ SRC = ft_atoi.c\
 	  ft_strword.c\
 	  ft_tabcat.c\
 	  ft_tabccat.c\
+	  ft_tablen.c\
 	  ft_tolower.c\
 	  ft_toupper.c\
 	  ft_joinfree.c\
