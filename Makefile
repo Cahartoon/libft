@@ -6,7 +6,7 @@
 #    By: edinguim <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 15:04:32 by edinguim          #+#    #+#              #
-#    Updated: 2018/02/12 10:41:52 by edinguim         ###   ########.fr        #
+#    Updated: 2018/02/16 11:32:44 by edinguim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRC = ft_atoi.c\
 	  ft_ltoa.c\
 	  ft_utoa_base.c\
 	  ft_lstadd.c\
+	  ft_lstappend.c\
 	  ft_lstdel.c\
 	  ft_lstdelone.c\
 	  ft_lstiter.c\

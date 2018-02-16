@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 18:36:42 by edinguim          #+#    #+#             */
-/*   Updated: 2018/02/12 10:44:01 by edinguim         ###   ########.fr       */
+/*   Updated: 2018/02/16 11:32:03 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ t_list				*ft_lstnew(const void *content, size_t content_size);
 void				ft_lstdelone(t_list **alist, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *nlst);
+void				ft_lstappend(t_list *head, t_list *feet);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				*ft_memalloc(size_t size);
