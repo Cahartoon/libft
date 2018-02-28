@@ -6,7 +6,7 @@
 /*   By: edinguim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/16 13:28:01 by edinguim          #+#    #+#             */
-/*   Updated: 2018/02/16 13:34:37 by edinguim         ###   ########.fr       */
+/*   Updated: 2018/02/16 13:38:10 by edinguim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t		ft_tablen(char **tab)
 	size_t		len;
 
 	len = 0;
-	while (tab++)
+	while (*tab++)
 		len++;
 	return (len);
 }
